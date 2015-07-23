@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html class="no-touch" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <title>Ello Facemaker: Make Your Own</title>
+    <meta content="Ello Facemaker: Make Your Own" name="description">
+    <meta content="Ello" name="author">
+    <meta content="width=device-width, initial-scale=1.0, minimal-ui, user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="white-translucent" name="apple-mobile-web-app-status-bar-style">
+    <meta content="Ello" property="og:site_name">
+    <meta content="Ello Facemaker: Make Your Own" property="og:title">
+    <meta content="Ello Facemaker: Make Your Own" property="og:description">
+    <meta content="website" property="og:type">
+    <meta content="https://facemaker.ello.co/" property="og:url">
+    <meta content="https://facemaker.ello.co/images/facemaker.jpg" property="og:image">
+    <meta content="https://facemaker.ello.co/" name="twitter:url">
+    <meta content="Ello Facemaker: Make Your Own" name="twitter:title">
+    <meta content="Ello Facemaker: Make Your Own" name="twitter:description">
+    <meta content="https://ello.co/images/facemaker.jpg" name="twitter:image">
+    <link href="https://ello.co/apple-touch-icon-precomposed.png" rel="apple-touch-icon">
+    <link href="https://ello.co/apple-touch-icon-precomposed.png" rel="apple-touch-icon-precomposed">
+    <link href="./stylesheets/facemaker.css" media="all" rel="stylesheet">
+  </head>
+  <body data-activated="" role="document">
+    <div class="centered">
+      <header class="banner" role="banner">
+        <a class="link-logo" href="https://ello.co/enter">
+          <svg class="svgicon icon-ello" viewBox="0 0 60 60"><title>Ello</title>
+            <path class="svg-bg" d="M0 0h60v60h-60z"></path>
+            <path class="svg-fg" d="M30 48c-8.2 0-15.4-5.6-17.4-13.5-.2-.9.3-1.9 1.2-2.1.9-.2 1.9.3 2.1 1.2 1.7 6.4 7.5 10.9 14.1 10.9s12.4-4.5 14.1-10.9c.2-.9 1.2-1.5 2.1-1.2.9.2 1.5 1.2 1.2 2.1-2 7.9-9.2 13.5-17.4 13.5z"></path>
+          </svg>
+        </a>
+        <h1 class="tagline">Welcome to the Ello Facemaker</h1>
+        <div class="links">
+          <a class="link-action" href="https://ello.co/wtf/post/about">About</a>
+          <a class="link-action js-section-link" href="https://ello.co/manifesto">Manifesto</a>
+          <a class="link-action" href="http://ello.threadless.com/" target="_blank">Store</a>
+        </div>
+      </header>
+      <p class="instructions">Select a file or drag an image into the box below, then move and resize the Ello logo to fit. After you're done you'll be able to save &amp; share your creation!</p>
+      <div class="main" role="main">
+        <section data-is-facemaker="true" id="facemaker" role="editor"><div class="article">
+          <div class="facemaker">
+            <div class="facemaker-canvas-container">
+              <canvas class="facemaker-canvas-drop-draw"></canvas>
+              <span>Drag an image here</span>
+            </div>
+            <div class="facemaker-navigation">
+              <div class="btn-outlined">
+                <span>Choose File</span>
+                <svg class="svgicon icon--standard icon--browse" viewBox="0 0 19 19"><title>Upload</title>
+                  <path class="svg-bg" d="M0 0h19v19h-19z"></path>
+                  <path class="svg-fg" d="M13 6v-3h-10v10h3v3h10v-10h-3zm-9 6v-8h8v2h-6v6h-2zm11 3h-8v-8h8v8z"></path>
+                </svg>
+                <input accept="image/*" capture="camera" class="file-input" type="file">
+              </div>
+              <button class="facemaker-export-image btn">Save</button>
+              <a class="export-img-save-link" download="ello.jpg" href="https://ello.co/facemaker#" target="_blank"></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      </div>
+    </div>
+    <script src="./javascripts/pixi.js"></script>
+    <script src="./javascripts/canvas_util.js"></script>
+    <script src="./javascripts/math_util.js"></script>
+    <script src="./javascripts/mouse-and-touch-tracker.js"></script>
+    <script src="./javascripts/facemaker.js"></script>
+    <script src="./javascripts/main.js"></script>
+  </body>
+</html>
