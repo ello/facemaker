@@ -1,0 +1,470 @@
+/* */
+@font-face {
+  font-family: "AtlasTypewriterRegular";
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  src: url("../fonts/AtlasTypewriter-Regular-Web.eot");
+  src: url("../fonts/AtlasTypewriter-Regular-Web.eot?#iefix") format("embedded-opentype"), url("../fonts/AtlasTypewriter-Regular-Web.woff") format("woff"), url("../fonts/AtlasTypewriter-Regular-Web.ttf") format("truetype"), url("../fonts/AtlasTypewriter-Regular-Web.svg#AtlasTypewriterRegular") format("svg");
+}
+
+@font-face {
+  font-family: "AtlasGroteskBold";
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  src: url("../fonts/AtlasGrotesk-Bold-Web.eot");
+  src: url("../fonts/AtlasGrotesk-Bold-Web.eot?#iefix") format("embedded-opentype"), url("../fonts/AtlasGrotesk-Bold-Web.woff") format("woff"), url("../fonts/AtlasGrotesk-Bold-Web.ttf") format("truetype"), url("../fonts/AtlasGrotesk-Bold-Web.svg#AtlasGroteskBold") format("svg");
+}
+
+@-webkit-keyframes animate-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  color: black;
+  font-size: 100%;
+  line-height: 1.5;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: white;
+}
+
+::-moz-selection {
+  background: black;
+  color: white;
+  text-shadow: none;
+}
+::selection {
+  background: black;
+  color: white;
+  text-shadow: none;
+}
+
+canvas, svg, video {
+  vertical-align: middle;
+}
+
+button,
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+
+html {
+  font-family: "AtlasTypewriterRegular", "Andale Mono", "Consolas", "Lucida Console", "Menlo", "Luxi Mono", monospace;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.heading, .tagline {
+  font-family: "AtlasGroteskBold", "Helvetica Neue", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+p, .tagline, .link-action {
+  font-size: 0.75rem;
+}
+
+.btn, .btn-outlined {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  text-transform: none;
+  outline: 0;
+}
+
+.btn, .btn-outlined {
+  -webkit-transition: background-color 150ms ease, border-color 150ms ease, color 150ms ease;
+          transition: background-color 150ms ease, border-color 150ms ease, color 150ms ease;
+  border: 1px solid;
+  padding: 1.25rem 1.6875rem;
+  font-size: 0.75rem;
+  text-align: center;
+  vertical-align: middle;
+}
+.active.btn, .active.btn-outlined, [disabled].btn, [disabled].btn-outlined {
+  cursor: default;
+}
+
+a {
+  background: transparent;
+  color: inherit;
+  text-decoration: none;
+}
+
+p a {
+  -webkit-transition: color 150ms ease;
+          transition: color 150ms ease;
+  text-decoration: underline;
+}
+
+p a:active {
+  color: #aaaaaa;
+}
+
+.heading {
+  color: black;
+  font-size: 1.5rem;
+  line-height: 1.35;
+}
+
+.no-touch p a:hover,
+.no-touch p a:focus {
+  color: black;
+}
+
+.tagline {
+  display: block;
+  margin: 1rem 0 0;
+  float: none;
+  color: black;
+  font-size: 1rem;
+}
+
+@media(min-width: 30em) {
+  .tagline {
+    margin: 0;
+    display: inline-block;
+    float: left;
+    margin-top: 0.875rem;
+    margin-left: 1.25rem;
+    font-size: 1.375rem;
+  }
+}
+
+@media(min-width: 48em) {
+  .tagline {
+    max-width: none;
+    margin-top: 0.75rem;
+    margin-left: 1.875rem;
+    font-size: 1.5625rem;
+  }
+}
+
+.svgicon {
+  width: 1.3125rem;
+  height: 1.3125rem;
+  margin: -3px 0 -3px 3px;
+}
+
+.svgicon .svg-bg {
+  fill: transparent;
+}
+
+.svgicon .svg-fg {
+  -webkit-transition: fill 150ms ease;
+          transition: fill 150ms ease;
+  fill: black;
+}
+
+.svgicon.icon-ello {
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius: 3.75rem;
+  overflow: hidden;
+  margin: 0;
+}
+
+.svgicon.icon-ello .svg-bg {
+  fill: black;
+}
+
+.svgicon.icon-ello .svg-fg {
+  fill: white;
+}
+
+input {
+  margin: 0;
+  color: inherit;
+  font: inherit;
+  -webkit-appearance: caret;
+  -moz-appearance: caret;
+}
+input::-webkit-input-placeholder {
+  color: #333333;
+}
+input::-moz-placeholder {
+  color: #333333;
+}
+input:-ms-input-placeholder {
+  color: #333333;
+}
+input::placeholder {
+  color: #333333;
+}
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+input:focus::-moz-placeholder {
+  color: transparent;
+}
+input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+input:focus::placeholder {
+  color: transparent;
+}
+
+.btn {
+  background-color: black;
+  border-color: #aaaaaa;
+  color: white;
+}
+.btn.active, .btn[disabled] {
+  background-color: black;
+  border-color: #aaaaaa;
+  color: white;
+}
+
+.no-touch .btn:hover, .no-touch .btn:focus {
+  background-color: transparent;
+  border-color: black;
+  color: black;
+}
+
+.btn-outlined {
+  background-color: transparent;
+  border-color: black;
+  color: black;
+  position: relative;
+}
+.btn-outlined.active, .btn-outlined[disabled] {
+  background-color: transparent;
+  border-color: black;
+  color: black;
+}
+
+.no-touch .btn-outlined:hover, .no-touch .btn-outlined:focus {
+  background-color: black;
+  border-color: #aaaaaa;
+  color: white;
+}
+.no-touch .btn-outlined:hover .svgicon .svg-fg, .no-touch .btn-outlined:focus .svgicon .svg-fg {
+  fill: white;
+}
+.no-touch .btn-outlined.dark:hover, .no-touch .btn-outlined.dark:focus {
+  background-color: transparent;
+  border-color: #aaaaaa;
+  color: black;
+}
+
+html, body, .main {
+  height: 100%;
+}
+
+.main {
+  width: 100%;
+}
+
+.banner {
+  -webkit-transition: height 150ms ease;
+          transition: height 150ms ease;
+  position: relative;
+  padding: 5.625rem 0 0;
+  height: 11.875rem;
+}
+
+.link-logo {
+  float: none;
+}
+
+.link-logo.loading {
+  -webkit-animation: animate-spin 0.3s infinite linear;
+          animation: animate-spin 0.3s infinite linear;
+}
+
+@media(min-width: 30em) {
+  .link-logo {
+    float: left;
+  }
+}
+
+.links {
+  -webkit-transition: right 150ms cubic-bezier(0.77, 0, 0.175, 1), left 150ms cubic-bezier(0.77, 0, 0.175, 1), top 150ms cubic-bezier(0.77, 0, 0.175, 1);
+          transition: right 150ms cubic-bezier(0.77, 0, 0.175, 1), left 150ms cubic-bezier(0.77, 0, 0.175, 1), top 150ms cubic-bezier(0.77, 0, 0.175, 1);
+  position: absolute;
+  top: 1.25rem;
+  right: 0;
+  left: auto;
+}
+
+@media(min-width: 48em) {
+  .links {
+    right: 0rem;
+    top: 6.25rem;
+  }
+}
+
+.links .link-action + .link-action {
+  margin-left: 0.9375rem;
+}
+
+.link-action {
+  -webkit-transition: margin-right 150ms cubic-bezier(0.77, 0, 0.175, 1);
+          transition: margin-right 150ms cubic-bezier(0.77, 0, 0.175, 1);
+  -webkit-transition: color 300ms ease;
+          transition: color 300ms ease;
+  display: inline-block;
+  color: #999999;
+}
+
+@media(max-width: 25em) {
+  .link-action {
+    margin-right: -0.375rem;
+  }
+}
+
+@media(min-width: 40.625em) {
+  .link-action {
+    padding: 0 2px;
+  }
+}
+
+.no-touch .link-action:hover, .no-touch .link-action:focus {
+  color: black;
+}
+
+.section {
+  display: table;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.article {
+  display: table-cell;
+  vertical-align: middle;
+  height: 100%;
+  padding: 0;
+}
+
+.centered {
+  width: 52.5rem;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.instructions {
+  max-width: 31.25rem;
+}
+
+body {
+  height: auto;
+}
+
+#facemaker {
+  width: 800px;
+  max-width: 100%;
+  margin: 1.875rem auto 0;
+}
+#facemaker .article {
+  display: block;
+}
+
+@media(min-width: 30em) {
+  #facemaker {
+    margin: 3.125rem auto 0;
+  }
+}
+
+.facemaker-canvas-drop-draw {
+  display: none;
+}
+
+.facemaker {
+  background-color: #535353;
+}
+
+.facemaker-canvas-container {
+  position: relative;
+  background: #333333;
+  margin-bottom: 10px;
+}
+
+.facemaker-canvas-container span {
+  -webkit-transition: color 150ms cubic-bezier(0.77, 0, 0.175, 1);
+          transition: color 150ms cubic-bezier(0.77, 0, 0.175, 1);
+  position: absolute;
+  bottom: 24px;
+  left: 30px;
+  font-size: 0.75rem;
+  z-index: 6;
+  pointer-events: none;
+  color: white;
+}
+
+.facemaker-error .facemaker-canvas-container span {
+  color: red;
+}
+
+.touch .facemaker-canvas-container span,
+.facemaker-has-image .facemaker-canvas-container span {
+  display: none;
+}
+
+.facemaker-canvas-container canvas {
+  z-index: 2;
+  position: relative;
+}
+
+.facemaker-canvas-container canvas.drop-over {
+  outline: dashed 4px white;
+}
+
+.file-input {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.facemaker-navigation {
+  float: right;
+  height: 6.25rem;
+}
+
+.image-stream {
+  clear: both;
+}
